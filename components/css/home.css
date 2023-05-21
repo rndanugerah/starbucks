@@ -44,7 +44,7 @@ header ul{
     position: relative;
     display: flex;
     cursor: pointer;
-    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 header ul li {
@@ -52,21 +52,19 @@ header ul li {
   padding: 10px 20px;
   margin-right:10px ;
   border-radius: 7px;
-  border: 1px solid var(--text-2nd-clr);
-  background: transparent;
-  color: var(--text-clr);
+  border: 1px solid var(--text-clr);
+  background-color: var(--text-2nd-clr);
   overflow: hidden;
+  color: #fff;
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   font-size: 14px;
-  text-transform: uppercase;
   font-weight: 500;
 }
 
 header ul li:hover {
-  background: var(--text-2nd-clr);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -165,9 +163,8 @@ header ul li:active {
 .thumb{
     position: absolute;
     display: flex;
-    left: 50%;
+    left: 100px;
     bottom: 20px;
-    transform: translateX(-50%);
 }
 
 .thumb li{
@@ -196,39 +193,71 @@ header ul li:active {
     transform: translateY(-50%);
 }
 
-.sci a{
-    position: relative;
-    margin: 10px;
-    color: var(--main-pg);
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+.sci .icon {
+  position: relative;
+  margin: 10px;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.sci a .bubble{
-    display: none;
-    width: 6rem;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.5rem;
-    background-color: #333;
-    border-radius: 3px;
-    font-size: 0.8rem;
+.sci .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.sci a:hover .bubble{
-    display: block;
-    color: var(--main-pg);
+.sci .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sci .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sci .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.sci .facebook:hover .tooltip,
+.sci .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #fff;
+}
+
+.sci .twitter:hover .tooltip,
+.sci .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.sci .instagram:hover .tooltip,
+.sci .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #fff;
 }
 
 .circle-top{

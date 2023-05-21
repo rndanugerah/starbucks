@@ -3,7 +3,7 @@ function imgSlider(anything){
 }
 
 function changeColorCircle(color) {
-    const circles = document.querySelectorAll('.circle-top, .circle-bottom');
+    const circles = document.querySelectorAll('.circle-top, .circle-bottom, .name');
     circles.forEach(circle => {
         circle.style.background = color;
     });
