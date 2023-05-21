@@ -36,8 +36,14 @@ header{
 }
 
 header .logo-icon{
+    margin: 40px 0 0 30px;
     position: relative;
-    max-width: 80px;
+    filter: drop-shadow(0 0.20rem 0.75rem #000000);
+}
+
+header .logo-icon img{
+  width: 80px;
+  height: 80px;
 }
 
 header ul{
@@ -153,11 +159,30 @@ header ul li:active {
   
 .content .ImgBox{
     width: 400px;
-    height: 70vh;
+    height: 55vh;
 }
 
 .content .ImgBox img{
     max-width: 400px;
+}
+
+.content .ImgBox img{
+  width: 30vw;
+  margin-left: 10rem;
+  float: right;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(-2.5rem);
+  }
+  100%{
+      transform: translateY(0);
+  }
 }
 
 .thumb{
@@ -184,7 +209,7 @@ header ul li:active {
 
 .sci{
     position: absolute;
-    top: 50%;
+    top: 60%;
     right:30px;
     display: flex;
     justify-content: center;
@@ -267,7 +292,7 @@ header ul li:active {
     width: 100%;
     height: 100%;
     background: var(--text-2nd-clr);
-    clip-path: circle(600px at left -400px);
+    clip-path: circle(550px at left -300px);
 }
 
 .circle-bottom{
