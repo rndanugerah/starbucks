@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UsTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="components/css/home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="components/js/index.js"></script>
+</head>
+<body>
+    <section class="home" id="home">
+        <div class="circle-top"></div>
+        <div class="circle-bottom"></div>
+        <header>
+            <div class="logo-icon"><img src="components/images/starbucks.png"></div>
+            <nav>
+                <ul>
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>Menu</li>
+                    <li><a href="#"></a>What's New</li>
+                    <li><a href="#"></a>Contact</li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="text-box">
+                <h2>It's not just Coffe <br> It's <span> Starbucks</span></h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="ImgBox">
+                <img src="components/images/img1.png" class="Starbucks">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="components/images/thumb1.png" onclick="imgSlider('components/images/img1.png'), changeColorCircle('#017143')" alt=""></li>
+            <li><img src="components/images/thumb2.png" onclick="imgSlider('components/images/img2.png'), changeColorCircle('#eb7495')" alt=""></li>
+            <li><img src="components/images/thumb3.png" onclick="imgSlider('components/images/img3.png'), changeColorCircle('#d752b1')" alt=""></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="#"><i class='bx bxl-twitter'></i><span class="bubble">Twitter</span></a></li>
+            <li><a href="#"><i class='bx bxl-instagram-alt'></i><span class="bubble">Instagram</span></a></li>
+            <li><a href="#"><i class='bx bxl-facebook-square'></i><span class="bubble">Facebook</span></a></li>
+        </ul>
+    </section>
+</body>
+</html>
